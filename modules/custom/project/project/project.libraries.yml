@@ -1,0 +1,11 @@
+project:
+  version: 1.x
+  css:
+    theme:
+      css/project.css: {}
+product_js:
+  js:
+    js/product.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

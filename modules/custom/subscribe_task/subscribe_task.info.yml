@@ -1,0 +1,5 @@
+name: Subscription Module
+description: Module related to Subscription
+type: module
+package: custom
+core: 8.x

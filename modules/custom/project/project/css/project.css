@@ -1,0 +1,254 @@
+#names-fieldset-wrapper input, #names-fieldset-wrapper select, #names-fieldset-wrapper textarea {
+    width: 100%;
+    border: 1px solid #ccc; padding: 7px 14px 9px; transition: 0.4s; border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+#names-fieldset-wrapper th {
+    background: #1d84c3;
+     font-family: 'Open Sans', sans-serif;
+}
+
+#names-fieldset-wrapper input:focus, #names-fieldset-wrapper textarea:focus, #names-fieldset-wrapper select:focus{
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+  background: #f2f3f4;
+}
+
+#names-fieldset-wrapper table#edit-mytable {
+    border: #1d84c3 solid 3px;
+}
+
+#names-fieldset-wrapper fieldset {
+    border: #818587 solid 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#names-fieldset-wrapper input#add-row {
+    background: #1d84c3;
+    color: #fff;
+    font-size: 14px;
+}
+
+#names-fieldset-wrapper input#edit-submit {
+    background: #1d84c3;
+    color: #fff;
+    font-size: 14px;
+}
+
+
+#names-fieldset-wrapper label{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#names-fieldset-wrapper span.fieldset-legend {
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#edit-description {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+
+
+div#names-fieldset-wrapper {
+    position: relative;
+}
+
+#names-fieldset-wrapper fieldset#edit-fieldset-one .js-form-item:nth-child(-n+3) {
+    position: absolute;
+    width: 45.5%;
+}
+
+
+#names-fieldset-wrapper fieldset#edit-fieldset-one .js-form-item.form-item-title {
+    top: 36px;
+}
+
+#names-fieldset-wrapper fieldset#edit-fieldset-one .js-form-item.form-item-origin {
+    top: 121px;
+}
+
+#names-fieldset-wrapper fieldset#edit-fieldset-one .js-form-item.form-item-pickupdate {
+    top: 285px;
+}
+
+
+#names-fieldset-wrapper .js-form-item:nth-child(n+4) {
+    float: right;
+    width: 51%;
+}
+
+
+
+
+div#names-fieldset-wrapper:nth-child(3) {
+    width: 47%;
+    float: left;
+}
+
+div#names-fieldset-wrapper:nth-child(4) {
+    width: 51%;
+    float: right;
+}
+
+
+
+
+
+input.button.form-submit {
+    background: #1d84c3;
+    color: #fff;
+    font-size: 14px;
+    border: #0f659a solid 1px;
+	border-radius: 5px;
+}
+
+input.button.form-submit:hover{
+	background: #0f659a;
+	border: #1d84c3 solid 1px;
+}
+
+
+form#form-api-example-simple-form {
+    border: #1d84c3 solid 2px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+form#form-api-example-simple-form  {
+    border: #1d84c3 solid 2px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    float: left;
+    padding-bottom: 10px;
+}
+
+
+#names-fieldset-wrapper .fieldset-wrapper .form-item-commodity {
+    margin-top: 0;
+}
+
+
+#names-fieldset-wrapper fieldset#edit-fieldset-four {
+    margin-top: 0;
+}
+
+
+.form-actions {
+    padding-top: 10px;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+
+div#names-fieldset-wrapper:nth-child(5) {
+    width: 51%;
+    float: right;
+}
+
+div#names-fieldset-wrapper:nth-child(6) {
+    width: 47%;
+    float: left;
+}
+
+
+
+
+@media only screen and (max-width: 1199px) {
+	
+	form#form-api-example-simple-form {
+		width: 96%;
+	}
+	
+	#names-fieldset-wrapper .js-form-item:nth-child(n+4) {
+	margin-top: 0;
+	}
+	
+	#names-fieldset-wrapper fieldset#edit-fieldset-one .js-form-item.form-item-origin {
+	top: 107px;
+	}
+	
+	#names-fieldset-wrapper fieldset#edit-fieldset-one .js-form-item.form-item-pickupdate {
+	top: 249px;
+	}
+	
+	#names-fieldset-wrapper table#edit-mytable {
+	margin-top: 0;
+	}
+		
+}
+
+
+@media only screen and (max-width: 991px) {
+	
+
+#names-fieldset-wrapper fieldset#edit-fieldset-one .js-form-item.form-item-origin textarea {
+	height: 112px;
+}
+
+
+div#names-fieldset-wrapper:nth-child(3) {
+	width: 100%;
+}
+
+div#names-fieldset-wrapper:nth-child(6) {
+	width: 100%;
+	position: relative;
+	top: -331px;
+}
+
+div#names-fieldset-wrapper:nth-child(5) {
+	width: 100%;
+	margin-top: 50px;
+}
+
+.form-actions {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+
+}
+
+
+
+@media only screen and (max-width: 767px) {
+	
+	form#form-api-example-simple-form {
+		width: 88%;
+	}
+	
+	#names-fieldset-wrapper fieldset#edit-fieldset-one .js-form-item:nth-child(-n+3) {
+	position: static;
+	width: 100%;
+}
+
+#names-fieldset-wrapper .js-form-item:nth-child(n+4) {
+	float: right;
+	width: 100%;
+}
+
+div#names-fieldset-wrapper:nth-child(3) {
+	overflow-x: auto;
+}
+
+#edit-actions input {
+	position: relative;
+	top: -25px;
+}
+	
+	
+}

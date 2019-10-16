@@ -1,0 +1,16 @@
+custom_form:
+  path: '/custom-form'
+  defaults:
+    _form: '\Drupal\custom_form\Form\Custom'
+    _title: 'Creative Form'
+  requirements:
+    _permission: 'access content'
+
+
+custom_form:
+  path: '/custom-form'
+  defaults:
+    _form: '\Drupal\custom_form\Form\Custom'
+    _title: 'Creative Form'
+  requirements:
+    _permission: 'access content'

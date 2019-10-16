@@ -1,0 +1,7 @@
+project.simple_form:
+  path: '/project/create'
+  defaults:
+    _form:  '\Drupal\project\Form\ProjectCreate'
+    _title: 'Create Project'
+  requirements:
+    _permission: 'access content'

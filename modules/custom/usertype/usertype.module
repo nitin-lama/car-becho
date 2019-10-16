@@ -1,0 +1,38 @@
+<?php
+
+use Drupal\user\Entity\User;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+
+/**
+* Implements hook_views_query_alter().
+*/
+function usertype_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  // $view->id() == 'slider' || $view->id() == 'featured_products'
+  if ($view->id() == 'website' || $view->id() == 'product_section') {
+    //if($view->current_display == 'product_slider' || $view->current_display == 'featured_product' || $view->current_display == 'product_list')  {
+    //     kint($view->current_display);die;
+    $field = [
+      'product_slider' => ':node__field_product_type_field_product_type_target_id[]',
+      'featured_product' => ':node__field_pro_type_field_pro_type_target_id[]',
+      'product_list' => ':node__field_pro_type_field_pro_type_target_id[]'
+    ];
+    $user_type_id = getUserType();
+    //kint($user_type_id);die;
+    if(!empty($user_type_id)) {
+      $query->where[0]['conditions'][0]['value'][$field[$view->current_display]] = $user_type_id;
+      // $query->addWhere('1', 'node__field_product_taxonomy.field_product_taxonomy_target_id', $target_id, 'IN');
+      //  kint($query);die;
+      //$query->where[0]['conditions'][0]['value'][':node__field_product_type_field_product_type_target_id[]'] = $user_type_id;
+    }
+  }
+}
+
+function getUserType(){
+  $user_id = \Drupal::currentUser()->id(); //Storing User ID
+  $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+  $user_type = $user->get('field_user_type')->getValue(); //Storing User Type ID not the User ID
+  $user_type_id = array_column($user_type,'target_id');
+  $user_type_id = array_combine($user_type_id, $user_type_id);
+  return $user_type_id;
+}

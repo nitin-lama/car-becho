@@ -1,0 +1,41 @@
+<?php
+
+function subscribe_task_page_attachments(array &$attachments) {
+  // Unconditionally attach an asset to the page.
+  $attachments['#attached']['library'][] = 'subscribe_task/subscribe';
+}
+
+function subscribe_task_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+  switch ($key) {
+    case 'node_update':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Product Updated: @title', array('@title' => $params['node_title']), $options);
+      $message['body'][] = $params['message'];
+    break;
+  }
+}
+
+function subscribe_task_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity instanceof \Drupal\node\NodeInterface) {
+    $conn = \Drupal::database();
+    $data = $conn->query("SELECT NID, UID from subscribe")->fetchAll();
+    foreach ($data as $value) {
+      if($entity->id() == $value->NID) {
+        $recieve_user_id = $value->UID;
+        $user = \Drupal::service('entity_type.manager')->getStorage('user')->load($recieve_user_id);
+        $recieve_mail = $user->getEmail();
+        $mailManager = \Drupal::service('plugin.manager.mail');
+        $module = 'subscribe_task';
+        $key = 'node_update';
+        $to = $recieve_mail;
+        $params['message'] = "Updation in the product, Kindly login to see.";
+        $langcode = \Drupal::currentUser()->getPreferredLangcode();
+        $send = TRUE;
+        $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+      }
+    }
+  }
+}

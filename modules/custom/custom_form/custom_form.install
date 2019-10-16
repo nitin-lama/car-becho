@@ -1,0 +1,39 @@
+<?php
+
+/*
+* Implements Hook Schema
+*/
+
+function custom_form_schema() {
+  $schema['custom_form'] = array(
+    // Example (partial) specification for table "node".
+    'description' => 'An example table.',
+    'fields' => array(
+      'S_No' => array(
+        'description' => 'Serial No.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+
+      'Form_Name' => array(
+        'description' => 'Form Name',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+
+      'Json' => array(
+        'description' => 'Json value',
+        'type' => 'blob',
+      ),
+    ),
+
+    'primary key' => array(
+      'S_No',
+    ),
+  );
+
+  return $schema;
+}

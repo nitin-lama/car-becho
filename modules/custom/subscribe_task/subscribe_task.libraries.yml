@@ -1,0 +1,4 @@
+subscribe:
+  version: 1.x
+  js:
+    js/subscribe_task.js: {}

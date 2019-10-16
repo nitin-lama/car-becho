@@ -1,0 +1,23 @@
+<?php
+
+/**
+* Implements hook_page_attachments().
+*/
+function custom_action_page_attachments(array &$attachments) {
+  // Getting the sepecifc view.
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if ($route_name == "view.car_becho.page_1") {
+    $attachments['#attached']['library'][] = 'custom_action/custom';
+  }
+}
+
+/**
+ * Implements hook_views_pre_view()
+ */
+function custom_action_views_pre_view(&$view, &$display_id, &$args) {
+
+  if ($view->id() == 'compare_page') {
+    $id = \Drupal::request()->query->get('id');
+    $view->args[0] = implode(',', $id);
+  }
+}

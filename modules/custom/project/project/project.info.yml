@@ -1,0 +1,5 @@
+name: Project Form
+type: module
+description: Project form.
+package: Custom
+core: 8.x

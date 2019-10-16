@@ -1,0 +1,5 @@
+name: Custom Form
+description: Creative Testing Table
+type: module
+package: custom
+core: 8.x

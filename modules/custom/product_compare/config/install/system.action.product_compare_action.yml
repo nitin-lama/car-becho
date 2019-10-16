@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - product_compare
+  module:
+    - product_compare
+id: product_compare_action
+label: 'Product Compare'
+type: node
+plugin: "product_compare_action"
+configuration: {  }

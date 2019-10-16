@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * project file.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function project_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['#attached']['library'][] = 'project/product_js';
+}

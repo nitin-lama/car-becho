@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - custom_action
+  module:
+    - custom_action
+id: compare
+label: 'Compare'
+type: node
+plugin: "compare"
+configuration: {  }

@@ -1,0 +1,5 @@
+name: Rest Example
+description: Module to check user type with content type
+package: custom
+type: module
+core: 8.x

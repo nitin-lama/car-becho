@@ -1,0 +1,5 @@
+name: Drop Down Language Switcher
+description: Block changing language of the user
+type: module
+core: 8.x
+package: custom

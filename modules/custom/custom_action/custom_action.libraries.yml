@@ -1,0 +1,9 @@
+custom:
+  version: 1.x
+  css:
+    theme:
+      css/custom_apply.css: {}
+  js:
+    js/custom_apply.js: {}
+  dependencies:
+    - core/jquery

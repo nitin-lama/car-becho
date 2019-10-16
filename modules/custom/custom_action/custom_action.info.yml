@@ -1,0 +1,5 @@
+name: 'custom_action'
+type: module
+description: 'Custom Module to add compare action in VBO'
+core: 8.x
+package: 'Custom'

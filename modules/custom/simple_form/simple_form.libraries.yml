@@ -1,0 +1,5 @@
+hidden-library:
+  version: 1.x
+  css:
+    theme:
+      css/hidden.css: {}

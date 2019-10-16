@@ -1,0 +1,15 @@
+#table th {
+	text-align: center;
+	background: #1d84c3;
+}
+
+#right {
+	text-align: right;
+}
+
+.cu_total, .Grandtotal, .cu_serial{
+	pointer-events:none;
+}
+input[data-drupal-selector="edit-compare"]{
+    display: none;
+}

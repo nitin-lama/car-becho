@@ -1,0 +1,4 @@
+name: Daily Quotes Block
+description: Simple block to show quotes
+type: module
+core: 8.x
